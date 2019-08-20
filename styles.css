@@ -1,0 +1,270 @@
+@charset "utf-8";
+
+/*
+    Project V2: Adding Pizzazz, Responsiveness, and Tables (Tutorials 4-6)
+
+    Title: What's up with avocado toast?
+    Name: Jason Omens
+    Date: 2019-08-10
+
+    Filename: styles.css
+
+*/
+
+
+/* HTML Style */
+
+html {
+    /* M4LO2 Demonstrate the use of background images
+       I wanted a repeating background image around the edge of the screen */
+    background-image: url(avo_background.png);
+    background-repeat: repeat;
+}
+
+/* Body Styles */
+
+/* All body texts will inherit the color #081305 that I chose from a palette at colorpalettes.net */
+body {
+    background-color: hsl(73, 55%, 72%);
+    background-color: #cedf90;
+    background-color: rgb(206, 223, 144);
+    font-family: Verdana, Geneva, sans-serif;
+    color: #081305;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 95%;
+    padding-bottom: 200px;
+}
+
+body > header > img { /* This is the logo at the top of the page */
+    display: block;
+    width: 100%;
+}
+
+/* List Styles */
+
+/* I do not plan on going deeper than two layers in a list.
+    I will remove this style rule in V3. */
+ol {list-style-type: decimal;}
+ol ol {list-style-type: lower-alpha;}
+
+/* Text Styles */
+
+h1 {
+    color: #085005;
+    font-size: 2em;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+h2#projectprogress {
+    color: #087005;
+    font-size: 2em;
+    padding-top: 50px;
+    text-align: center;
+    /* M4LO5 Demonstrate the use of text or box shadowing
+       This impacted the HTML because I took out the inline style that I was using for this <h2> and put it in the styles.css instead.
+       I also added an ID in the HTML. */
+    text-shadow: black 0 0 15px;
+}
+
+h3.progress {
+    font-size: 1.25em;
+    padding-top: 50px;
+    text-align: center;
+}
+/* M5LO5 Demonstrate the use of flexboxes on a web page
+   I set up a single flexbox on the About page to put V1-V3 in their own items that will resize as needed on any device. */
+div#flexboxed {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    /* M5LO7 Demonstrate use of properties of flexbox containers
+             The only property I want to use is setting up the direction to be vertical.  Since there will only be 3 items, I didn't want anything else. 
+             Note: I didn't want it to be the entire width of the screen so I added width and margin. */
+    flex-direction: column;
+    width: 85%;
+    margin: 0 auto;
+}
+
+div#referencesandsources {
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+/* Picture and Recipe Styles */
+
+p#recipe {
+    position: relative;
+    top: 3px;
+    left: 1px;
+}
+
+/* Footer Styles */
+
+footer {
+    bottom: 10px;
+    width: 95%;
+    padding-top: 10px;
+    position: fixed;
+    text-align: center;
+    /* M4LO3 Demonstrate the use of rounded corners for borders */
+    border-radius: 20px;
+    /* M4LO4 Demonstrate the use of gradients
+       Makes a gradient from brown to green in the footer of all pages
+       built on https://uigradients.com/#Forest */
+    background: #5A3F37;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C7744, #5A3F37);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C7744, #5A3F37); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}    
+
+footer p {
+    color: #84a02b;
+    font-size: 1.1em;
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+
+a[href="index.html#top"] {
+    text-decoration: none;
+}
+
+/* Figures and Articles */
+
+figure img {
+    display: block;
+    width: 100%;
+    /* M4LO8 Demonstrate the use of transformations for 2D or 3D images
+       I rotated the image and translated it to the left.  The impact on the HTML is that the image now lines up better with the caption, eliminating the
+       need to edit the image and/or changing the caption somehow. */
+    transform: rotateX(37deg) translateX(-35px);
+    /* M4LO6 Demonstrate the use of opacity/transparency for images
+       I gave the "plain avocado toast, nothing fancy" image some transparency to make it look a little bland. The other pictures will stand out more this way. */
+    opacity: 0.5;
+}
+
+figure figcaption {
+    text-align: center;
+}
+
+/* I do not plan to use articles anywhere but on the About page */
+/* M5LO6 Demonstrate use of properties of flexbox items
+   I set up all articles to expand and shrink at the same rate. */
+article {
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
+    /* put in the border below for testing
+    margin: 10px;
+    border-style: solid;
+    border-width: 3px; */
+}
+
+/* Screen sizes >480px */
+
+/* M5LO3 Use media queries to format a page differently for phones vs. PCs.
+   The @media query below is for phones and changes the nav to a pull down menu with a custom navicon.
+   Below that is another @media query for screens >480px. I moved all the existing nav items into that @media query for PCs. */
+
+/* Mobile devices up to 480px */
+
+@media only screen and (max-width: 480px) {
+
+    /* M5LO4 Use CSS for pull-down menus (or collapsible/expandable areas)
+       I'm using a self-made navicon that pops up in the upper left corner of the nav menu on phones.
+       When clicking it, the nav menu expands down. */
+    a#navicon {
+        display: block;
+    }
+
+    nav.horizontalnav ul {
+        display: none;
+    }
+    
+    /* pop up the menu items downward when clicked/hovered */
+    a#navicon:hover+ul, nav.horizontalnav ul:hover {
+        display: block;
+    }
+       
+    /* lines up all td's in the table into a single column */
+    td {
+        display: block;
+    }
+        
+    col#firstCol {
+            background: none;
+    }
+    
+    td.imgCell {
+        background: #085005;
+    }
+    
+    table.recipetable thead, table.recipetable tfoot {
+        display: none;
+    }
+}
+
+/* PC devices, for screens >480px */
+
+@media only screen and (min-width: 481px) {
+    
+    nav.horizontalnav li {
+        display: block;
+        float: left;
+        width: 25%;
+    }
+
+    nav.horizontalnav a {
+        background-color: #b7c656;
+        display: block;
+        font-size: 1.15em;
+        line-height: 2.5em;
+        text-align: center;
+    }
+    
+    nav.horizontalnav a:hover, nav.horizontalnav a:active {
+        color: #84a02b;
+    }
+
+    nav::after {
+        clear: both;
+        content: "";
+        display: table;
+    }
+    
+    /* M6LO7 Demonstrate how to format a table with CSS
+       I put a background color into the first column of the table.
+       Also, for the thead and tfoot below I made a black background with white text. */
+    col#firstCol {
+        background: #085005;
+    }
+
+    table.recipetable thead, table.recipetable tfoot {
+        background: black;
+        color: white;
+    }
+
+}
+
+/* Table styles*/
+
+/* I picked a white background to bring out the table info to make it easier to read */
+table.recipetable {
+    background: white;
+    border: 3px outset grey;
+    font-size: 1.1em;
+    width: 80%;
+    margin: 0 auto;
+}
+
+table.recipetable th {
+    padding: 15px;
+}
+
+table.recipetable th, table.recipetable td {
+    border: 1px solid grey;
+}

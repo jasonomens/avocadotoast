@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <!--
+    Project V2: Adding Pizzazz, Responsiveness, and Tables (Tutorials 4-6)
+
+    Title: What's up with avocado toast?
+    Name: Jason Omens
+    Date: 2019-08-10
+
+    Filename: lore.html
+    -->
+    <meta charset="utf-8" />
+    <title>AvoToast Lore</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="reset.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <style>
+        body > header > img {
+            background-color: hsl(83, 64%, 19%);
+            background-color: #395112;
+            background-color: rgb(57, 81, 18);
+        }
+    </style>
+</head>
+
+<body>
+    <header id="top">
+        <img src="avocadotoast_logo.png" alt="Avocado Toast Logo" />
+        <nav class="horizontalnav">
+        <a id="navicon" href="#"><img src="menu.png" alt="" /></a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="lore.html">Avocado Toast Lore</a></li>
+                <li><a href="pics_recipes.html">Pics and Recipes</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        <h1>Avocado Toast Lore</h1>
+        <p style="display: block; width: 50%; margin: 0 auto;">The picture below uses a map element (poly) which directs to another page on the site.
+        Click on the avocado toast on the cutting board. </p>
+        <!-- M4LO1 Demonstrate the use of figure boxes
+             The figure box below uses an image with a transparent background and centers the figcaption -->
+        <figure>
+            <img src="plain_avo_toast.png" alt="Plain Avocado Toast" usemap="#betterAvocadoToast" />
+            <figcaption>Plain avocado toast, nothing fancy!</figcaption>
+        </figure>
+        <!-- M4LO7 Demonstrate the use of image maps, including determining x and y values
+             The map element is set up using a polygon around the avocado toast on the cutting board above. -->
+        <map name="betterAvocadoToast">
+            <area shape="poly" coords="252,408,532,256,865,118,1057,312,579,540,286,560" href="pics_recipes.html" alt="Better Avocado Toast" />
+        </map>
+    </div>
+    <footer>
+        <p>&#129361; &nbsp;This site created by Jason Omens for CIS155&nbsp;&#127838; </p>
+        <p><a href="index.html#top">Go to Home Page</a></p>
+    </footer>
+</body>
+
+</html>
+ 
+ 

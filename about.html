@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <!--
+    Project V2: Adding Pizzazz, Responsiveness, and Tables (Tutorials 4-6)
+
+    Title: What's up with avocado toast?
+    Name: Jason Omens
+    Date: 2019-08-10
+
+    Filename: about.html
+    -->
+    <meta charset="utf-8" />
+    <title>About</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="reset.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <style>
+        body > header > img {
+            background-color: hsl(83, 64%, 19%);
+            background-color: #395112;
+            background-color: rgb(57, 81, 18);
+        }
+    </style>
+</head>
+
+<body>
+    <header id="top">
+        <img src="avocadotoast_logo.png" alt="Avocado Toast Logo" />
+        <nav class="horizontalnav">
+            <a id="navicon" href="#"><img src="menu.png" alt="" /></a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="lore.html">Avocado Toast Lore</a></li>
+                <li><a href="pics_recipes.html">Pics and Recipes</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        <!-- The color below came from colorpallets.net, color palette #3034. I wanted the text slightly more green so I changed it slightly. -->
+        <h2 id="projectprogress">Project Progress</h2>
+    </div>
+    <div id="flexboxed">
+        <article>
+            <h3 class="progress">V1: 2019-07-20</h3>
+                <p>I made placeholder pages for two of the four pages.  I picked a color palette
+                that I felt would go well with the idea of the project. There is no content yet
+                other than a sample picture to test relative positioning with. The nav menu took
+                some time to figure out because I had a percentage wrong. I also spent way too
+                much time figuring out the emojis in the footer. Little things like that made me
+                spend significantly more time than I thought I would need. Will plan better next time.</p>
+        </article>
+        <article>
+            <h3 class="progress">V2: 2019-08-10</h3>
+                <p>Most of the time spent on V2 was building the table. I added a repeating background, restructured
+                the About page to use flexboxes, changed the body style to min-width 481px and put in new @media
+                queries for phones and bigger screens on PCs. The mobile version of the nav menu has a navicon with a
+                dropdown menu. I again underestimated the required time, which this time was mainly spent constructing the
+                table.  I also struggled with the map, which ended up being a typo.</p>
+        </article>
+    </div>
+    <div id="referencesandsources">
+        <h2 style="color: #085005; font-size: 1.25em; padding-top: 50px; padding-bottom: 5px; text-align: center;">References and Sources</h2>
+        <p>
+            Images sourced from: <a href="https://pixabay.com/" target="_blank">Pixabay</a><br />
+            Recipe #1 sourced from: <a href="https://minimalistbaker.com/my-go-to-avocado-toast/" target="_blank">Minimalist Baker</a><br />
+            Recipe #2 sourced from: <a href="https://cooking.nytimes.com/recipes/1019420-avocado-toast/" target="_blank">NY Times Cooking</a><br />
+            Recipe #3 sourced from: <a href="https://whatsgabycooking.com/avocado-toast-5-ways/" target="_blank">What's Gaby Cooking</a>
+            
+        </p>
+    </div>
+    <footer>
+        <p>&#129361; &nbsp;This site created by Jason Omens for CIS155&nbsp;&#127838; </p>
+        <p><a href="index.html#top">Go to Home Page</a></p>
+    </footer>
+</body>
+
+</html>

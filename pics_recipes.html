@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <!--
+    Project V2: Adding Pizzazz, Responsiveness, and Tables (Tutorials 4-6)
+
+    Title: What's up with avocado toast?
+    Name: Jason Omens
+    Date: 2019-08-10
+
+    Filename: pics_recipes.html
+    -->
+    <meta charset="utf-8" />
+    <title>Pics and Recipes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="reset.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <style>
+        body > header > img {
+            background-color: hsl(83, 64%, 19%);
+            background-color: #395112;
+            background-color: rgb(57, 81, 18);
+        }
+    </style>
+</head>
+
+<body>
+    <header id="top">
+        <img src="avocadotoast_logo.png" alt="Avocado Toast Logo" />
+        <nav class="horizontalnav">
+        <a id="navicon" href="#"><img src="menu.png" alt="" /></a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="lore.html">Avocado Toast Lore</a></li>
+                <li><a href="pics_recipes.html">Pics and Recipes</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        <h1>Pics and Recipes</h1>
+        
+        <!-- M6LO3 Demonstrate how to create a table
+             The table below shows 3 recipes for avocado toast, their ingredients and instructions, as well as a picture of each -->
+        <table class="recipetable">
+
+            <colgroup>
+                <col span="1" id="firstCol" />
+                <col span="2" />
+            </colgroup>
+
+ 			<thead>
+                <tr>
+                    <th colspan="3">Avocado Toast Recipes</th>
+                </tr>
+			</thead>
+
+			<tbody>
+                <tr>
+                    <!-- M6LO4 Demonstrate how to span multiple rows or multiple columns in a table
+                         The img, as well as the instructions below, span 2 rows -->
+                    <td class="imgCell" rowspan="2">
+                        <p style="color: red; font-size: 150%; text-align: center;">Basic Recipe<br /></p>
+                        <img src="recipe1.png" alt="Stepping it up!" />
+                    </td>
+                    <td>Bread type: Wheat, Whole-Grain</td>
+                    <td rowspan="2">
+                        Instructions:<br /><br />
+                        1. Toast bread.<br />
+                        2. Top with ripe avocado, using fork to smash.<br />
+                        3. Top with parmesan cheese.<br />
+                        4. Sprinkle optional red pepper flakes.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Ingredients:<br /><br />
+                        2 slices bread<br />
+                        1/2 - 3/4 ripe avocado <br />
+                        1-2 Tbl parmesan<br />
+                        1 pinch red pepper flakes (optional)
+                    </td>
+                </tr>
+                <tr>
+                    <td class="imgCell" rowspan="2">
+                        <p style="color: red; font-size: 150%; text-align: center;">Vegan<br /></p>
+                        <img src="recipe2.png" alt="Stepping it up!" />
+                    </td>
+                    <td>Bread type: Sourdough</td>
+                    <td rowspan="2">
+                        Instructions:<br /><br />
+                        1. Toast bread to your liking.<br />
+                        2. Remove avocado halves, keep in pieces.<br />
+                        3. Drizzle toast with olive oil and sprinkle with salt.<br />
+                        4. Press avocado halves onto toast with fork.<br />
+                        5. Sprinkle with more salt and squeeze citrus on top.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Ingredients:<br /><br />
+                        2 large slices crusty, chewy sourdough<br />
+                        1 ripe avocado<br />
+                        Extra-virgin olive oil<br />
+                        Flaky salt<br />
+                        Half a lemon or lime
+                    </td>
+                </tr>
+                <tr>
+                    <td class="imgCell" rowspan="2">
+                        <p style=" color: red; font-size: 150%; text-align: center;">Stepping it up!<br /></p>
+                        <img src="recipe3.png" alt="Stepping it up!" />
+                    </td>
+                    <td>Bread type: Any thick cut</td>
+                    <td rowspan="2">
+                        Instructions:<br /><br />
+                        1. Toast bread until golden brown.<br />
+                        2. Mash avocado with fork in bowl.<br />
+                        3. Add lemon juice and season with salt and pepper.<br />
+                        4. Slather mashed avocado onto toast.<br />
+                        5. Spread smoked salmon and red onion on top.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Ingredients:<br /><br />
+                        1 piece thick cut bread,<br />
+                        1/2 avocado<br />
+                        Freshly squeezed lemon juice<br />
+                        Kosher salt and pepper to taste<br />
+                        2 thin slices smoked salmon<br />
+                        Thin slice of red onion
+                    </td>
+                </tr>             
+			</tbody>
+       
+            <tfoot>
+			   <tr>
+			      <th colspan="3">Got any other good recipes?</th>
+			   </tr>
+			</tfoot>
+
+		 </table>
+ 
+    </div>
+    
+    <footer>
+        <p>&#129361; &nbsp;This site created by Jason Omens for CIS155&nbsp;&#127838; </p>
+        <p><a href="index.html#top">Go to Home Page</a></p>
+    </footer>
+</body>
+
+</html>
+ 
+ 
