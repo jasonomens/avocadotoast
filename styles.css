@@ -1,11 +1,11 @@
 @charset "utf-8";
 
 /*
-    Project V2: Adding Pizzazz, Responsiveness, and Tables (Tutorials 4-6)
+    Project V3: Forms, Media, GitHub (Tutorials 8-9 & Git-It)
 
     Title: What's up with avocado toast?
     Name: Jason Omens
-    Date: 2019-08-10
+    Date: 2019-08-22
 
     Filename: styles.css
 
@@ -15,8 +15,6 @@
 /* HTML Style */
 
 html {
-    /* M4LO2 Demonstrate the use of background images
-       I wanted a repeating background image around the edge of the screen */
     background-image: url(avo_background.png);
     background-repeat: repeat;
 }
@@ -38,17 +36,10 @@ body {
     padding-bottom: 200px;
 }
 
-body > header > img { /* This is the logo at the top of the page */
+body > header > img {
     display: block;
     width: 100%;
 }
-
-/* List Styles */
-
-/* I do not plan on going deeper than two layers in a list.
-    I will remove this style rule in V3. */
-ol {list-style-type: decimal;}
-ol ol {list-style-type: lower-alpha;}
 
 /* Text Styles */
 
@@ -65,9 +56,6 @@ h2#projectprogress {
     font-size: 2em;
     padding-top: 50px;
     text-align: center;
-    /* M4LO5 Demonstrate the use of text or box shadowing
-       This impacted the HTML because I took out the inline style that I was using for this <h2> and put it in the styles.css instead.
-       I also added an ID in the HTML. */
     text-shadow: black 0 0 15px;
 }
 
@@ -76,17 +64,11 @@ h3.progress {
     padding-top: 50px;
     text-align: center;
 }
-/* M5LO5 Demonstrate the use of flexboxes on a web page
-   I set up a single flexbox on the About page to put V1-V3 in their own items that will resize as needed on any device. */
 div#flexboxed {
     display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    /* M5LO7 Demonstrate use of properties of flexbox containers
-             The only property I want to use is setting up the direction to be vertical.  Since there will only be 3 items, I didn't want anything else. 
-             Note: I didn't want it to be the entire width of the screen so I added width and margin. */
+    -webkit-flex-direction: column;
     flex-direction: column;
     width: 85%;
     margin: 0 auto;
@@ -97,13 +79,65 @@ div#referencesandsources {
     text-align: center;
 }
 
-/* Picture and Recipe Styles */
+div#homeDIV {
+    text-align: center;
+}
+
+div#homeDIV p {
+    max-width: 60%;
+    margin: auto;
+}
+
+ul#loreList {
+    list-style: none;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+ul#loreList li {
+    line-height: 1.3em;
+}
+
+ul#loreList li::before {
+    content: "🥑 ";
+}
+
+/* Image, Video, and Recipe Styles */
+
+img#width420 {
+    max-width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 5px;
+}
+
+/* wrapper and block for iframe to make it resizable */
+.wrapper {
+    padding-bottom: 56.25%;
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.iframeBlock {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
 p#recipe {
     position: relative;
     top: 3px;
     left: 1px;
 }
+
+/* M8LO12 Demonstrate how to format media with CSS
+   The video takes up 75% of a cell in a table and has a margin so it's not flush with the text */
+video {
+    display: block;
+    margin: 25px auto;
+    width: 75%;
+}
+
 
 /* Footer Styles */
 
@@ -113,10 +147,8 @@ footer {
     padding-top: 10px;
     position: fixed;
     text-align: center;
-    /* M4LO3 Demonstrate the use of rounded corners for borders */
     border-radius: 20px;
-    /* M4LO4 Demonstrate the use of gradients
-       Makes a gradient from brown to green in the footer of all pages
+    /* Makes a gradient from brown to green in the footer of all pages
        built on https://uigradients.com/#Forest */
     background: #5A3F37;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #2C7744, #5A3F37);  /* Chrome 10-25, Safari 5.1-6 */
@@ -134,49 +166,17 @@ a[href="index.html#top"] {
     text-decoration: none;
 }
 
-/* Figures and Articles */
+/* Article Style */
 
-figure img {
-    display: block;
-    width: 100%;
-    /* M4LO8 Demonstrate the use of transformations for 2D or 3D images
-       I rotated the image and translated it to the left.  The impact on the HTML is that the image now lines up better with the caption, eliminating the
-       need to edit the image and/or changing the caption somehow. */
-    transform: rotateX(37deg) translateX(-35px);
-    /* M4LO6 Demonstrate the use of opacity/transparency for images
-       I gave the "plain avocado toast, nothing fancy" image some transparency to make it look a little bland. The other pictures will stand out more this way. */
-    opacity: 0.5;
-}
-
-figure figcaption {
-    text-align: center;
-}
-
-/* I do not plan to use articles anywhere but on the About page */
-/* M5LO6 Demonstrate use of properties of flexbox items
-   I set up all articles to expand and shrink at the same rate. */
 article {
     -webkit-flex: 1 1 auto;
     flex: 1 1 auto;
-    /* put in the border below for testing
-    margin: 10px;
-    border-style: solid;
-    border-width: 3px; */
 }
-
-/* Screen sizes >480px */
-
-/* M5LO3 Use media queries to format a page differently for phones vs. PCs.
-   The @media query below is for phones and changes the nav to a pull down menu with a custom navicon.
-   Below that is another @media query for screens >480px. I moved all the existing nav items into that @media query for PCs. */
 
 /* Mobile devices up to 480px */
 
 @media only screen and (max-width: 480px) {
 
-    /* M5LO4 Use CSS for pull-down menus (or collapsible/expandable areas)
-       I'm using a self-made navicon that pops up in the upper left corner of the nav menu on phones.
-       When clicking it, the nav menu expands down. */
     a#navicon {
         display: block;
     }
@@ -185,20 +185,14 @@ article {
         display: none;
     }
     
-    /* pop up the menu items downward when clicked/hovered */
     a#navicon:hover+ul, nav.horizontalnav ul:hover {
         display: block;
     }
        
-    /* lines up all td's in the table into a single column */
     td {
         display: block;
     }
         
-    col#firstCol {
-            background: none;
-    }
-    
     td.imgCell {
         background: #085005;
     }
@@ -206,12 +200,24 @@ article {
     table.recipetable thead, table.recipetable tfoot {
         display: none;
     }
+
+    /* Pics and Recipes Table */
+    col#firstCol {
+        background: none;
+        width: 100%;
+    }
+    
+    /* Lore Table */
+    col#loreCol1, col#loreCol2 {
+        width: 100%;
+    }
+        
 }
 
 /* PC devices, for screens >480px */
 
 @media only screen and (min-width: 481px) {
-    
+
     nav.horizontalnav li {
         display: block;
         float: left;
@@ -221,13 +227,22 @@ article {
     nav.horizontalnav a {
         background-color: #b7c656;
         display: block;
-        font-size: 1.15em;
+        font-size: 1em;
         line-height: 2.5em;
         text-align: center;
+        -webkit-transition: font-size 0.75 ease, background-color 0.75s ease, border-radius 0.75 ease;
+        -moz-transition: font-size 0.75 ease, background-color 0.75s ease, border-radius 0.75 ease;
+        /* M8LO10 Demonstrate a CSS animation or transition
+           The menu items transition to a larger font size, rounded corners, and the background goes from green to brown when hovered over */
+        transition: font-size 0.75s ease,
+                    background-color 0.75s ease,
+                    border-radius 0.75s ease;
     }
     
     nav.horizontalnav a:hover, nav.horizontalnav a:active {
-        color: #84a02b;
+        font-size: 1.25em;
+        background-color: #b7a656;
+        border-radius: 0px 0px 15px 15px;
     }
 
     nav::after {
@@ -236,13 +251,11 @@ article {
         display: table;
     }
     
-    /* M6LO7 Demonstrate how to format a table with CSS
-       I put a background color into the first column of the table.
-       Also, for the thead and tfoot below I made a black background with white text. */
+    /* Pics and Recipes Table */
     col#firstCol {
         background: #085005;
     }
-
+    
     table.recipetable thead, table.recipetable tfoot {
         background: black;
         color: white;
@@ -252,7 +265,6 @@ article {
 
 /* Table styles*/
 
-/* I picked a white background to bring out the table info to make it easier to read */
 table.recipetable {
     background: white;
     border: 3px outset grey;
@@ -268,3 +280,30 @@ table.recipetable th {
 table.recipetable th, table.recipetable td {
     border: 1px solid grey;
 }
+
+table.loreTable {
+    width: 90%;
+    margin: 0 auto;
+}
+
+table.loreTable thead, table.recipetable tfoot {
+    display: none;
+}
+
+/* Form Styles */
+
+/* M7LO11 Demonstrate how to format a form with CSS
+   The form is formatted using blocks, floats left and puts in a margin */
+label, input, textarea, select {
+    display: block;
+    float: left;
+    clear: both;
+    margin-top: 10px;
+    margin-left: 10%;
+    width: 80%;
+}
+
+textarea {
+    height: 120px;
+}
+

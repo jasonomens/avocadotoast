@@ -4,11 +4,11 @@
 
 <head>
     <!--
-    Project V2: Adding Pizzazz, Responsiveness, and Tables (Tutorials 4-6)
+    Project V3: Forms, Media, GitHub (Tutorials 8-9 & Git-It)
 
     Title: What's up with avocado toast?
     Name: Jason Omens
-    Date: 2019-08-10
+    Date: 2019-08-22
 
     Filename: lore.html
     -->
@@ -39,22 +39,77 @@
             </ul>
         </nav>
     </header>
-    <div>
-        <h1>Avocado Toast Lore</h1>
-        <p style="display: block; width: 50%; margin: 0 auto;">The picture below uses a map element (poly) which directs to another page on the site.
-        Click on the avocado toast on the cutting board. </p>
-        <!-- M4LO1 Demonstrate the use of figure boxes
-             The figure box below uses an image with a transparent background and centers the figcaption -->
-        <figure>
-            <img src="plain_avo_toast.png" alt="Plain Avocado Toast" usemap="#betterAvocadoToast" />
-            <figcaption>Plain avocado toast, nothing fancy!</figcaption>
-        </figure>
-        <!-- M4LO7 Demonstrate the use of image maps, including determining x and y values
-             The map element is set up using a polygon around the avocado toast on the cutting board above. -->
-        <map name="betterAvocadoToast">
-            <area shape="poly" coords="252,408,532,256,865,118,1057,312,579,540,286,560" href="pics_recipes.html" alt="Better Avocado Toast" />
-        </map>
-    </div>
+    <h1>Avocado Toast Lore</h1>
+
+    <table class="loreTable">
+        <colgroup span="2">
+            <col width="64%" id="loreCol1"/>
+            <col width="35%" id="loreCol2"/>
+        </colgroup>
+        <thead></thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">
+                    <!-- M8LO8 Demonstrate the use of the <video> element for embedding video in a Web page
+                         MP4 file is embedded using <video> element below -->
+                    <video controls>
+                        <source src="avocado_toast_ideas.mp4" type="video/mp4" />
+                        <p>To play this video, your browser needs to support HTML5.</p>
+                    </video>
+                    <ul id="loreList">
+                        <li>Avocado toast has been eaten in San Francisco since at least 1885</li><br />
+                        <li>In 1915, the California Avocado Association described small squares of avocado toast as hors d'oeuvres</li><br />
+                        <li>Chef Bill Granger may have been the first person to put avocado toast on the menu in 1993</li><br />
+                        <li>In 1999, Nigel Slater published a recipe for avocado "bruschetta" in <em>The Guardian</em></li><br />
+                        <li>Journalist and editor Lauren Oyler credits Cafe Gitane with bringing avocado toast to Instagram</li><br />
+                        <li>A <em>New York Times</em> article showcased a "special" way to put serve avocado on toast in 1962</li><br />
+                        <li>According to Lauren Oyler, avocado toast has surpassed grilled cheese as the go-to lunch in some demographics</li>
+                    </ul>
+                </td>
+                <td class="wrapper">
+                    <!-- M8LO9  Demonstrate the use of the iframe element
+                         YouTube video is within an iframe below -->
+                    <iframe class="iframeBlock" width="100%" height="100%" src="https://www.youtube.com/embed/xCR4iWurOQk" frameborder="0" allowfullscreen></iframe>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p style="margin-top: 15px; color: red; text-align: center;">Tell me what you think.</p>
+                    <p style="color: red; text-align: center;">All fields below are required!</p><br />
+                    <form action="https://cis2.oc.ctc.edu/oc_apps/Garripoli/checkform.php" method="post">
+                    
+                            <label for="nameForm">Name</label>
+                            <!-- M7LO5 Demonstrate the use of a text box in a form
+                                 The Name field below uses the text type. -->
+                            <input id="nameForm" name="Name" type="text" required />
+                        
+                            <label for="emailForm">Email</label>
+                            <input id="emailForm" name="Email" type="email" required />
+                        
+                            <label for="howfindForm">How did you hear about this site?</label>
+                            <!-- M7LO8 Demonstrate the use of a selection list in a form
+                                 The field below uses the selection list type -->
+                            <select id="howfindForm" name="HowFound" required>
+                                <option value="CIS 155 Class">CIS 155 Class</option>
+                                <option value="Word of Mouth">Word of Mouth</option>
+                                <option value="Internet Search">Internet Search</option>
+                            </select>
+                     
+                            <label for="questcommForm">Questions/Comments?</label>
+                            <!-- M7LO9 Demonstrate the use of a text area in a form
+                                 The Questions/Comments field below uses textarea -->
+                            <textarea id="quescommForm" name="Questions/Comments" required></textarea>
+                      
+                        <!-- M7LO10 Demonstrate the use of a submit button in a form
+                             The submit button below uses the URL given in class to check the POST method used in the form -->
+                        <p><input type="submit" value="submit" /></p>
+                    </form>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot></tfoot>
+    </table>
+
     <footer>
         <p>&#129361; &nbsp;This site created by Jason Omens for CIS155&nbsp;&#127838; </p>
         <p><a href="index.html#top">Go to Home Page</a></p>
