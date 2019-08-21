@@ -42,9 +42,9 @@
     <h1>Avocado Toast Lore</h1>
 
     <table class="loreTable">
-        <colgroup span="2">
-            <col width="64%" id="loreCol1"/>
-            <col width="35%" id="loreCol2"/>
+        <colgroup>
+            <col id="loreCol1"/>
+            <col id="loreCol2"/>
         </colgroup>
         <thead></thead>
         <tbody>
@@ -57,19 +57,20 @@
                         <p>To play this video, your browser needs to support HTML5.</p>
                     </video>
                     <ul id="loreList">
-                        <li>Avocado toast has been eaten in San Francisco since at least 1885</li><br />
-                        <li>In 1915, the California Avocado Association described small squares of avocado toast as hors d'oeuvres</li><br />
-                        <li>Chef Bill Granger may have been the first person to put avocado toast on the menu in 1993</li><br />
-                        <li>In 1999, Nigel Slater published a recipe for avocado "bruschetta" in <em>The Guardian</em></li><br />
-                        <li>Journalist and editor Lauren Oyler credits Cafe Gitane with bringing avocado toast to Instagram</li><br />
-                        <li>A <em>New York Times</em> article showcased a "special" way to put serve avocado on toast in 1962</li><br />
+                        <li>Avocado toast has been eaten in San Francisco since at least 1885<br /><br /></li>
+                        <li>In 1915, the California Avocado Association described small squares of avocado toast as hors d'oeuvres<br /><br /></li>
+                        <li>Chef Bill Granger may have been the first person to put avocado toast on the menu in 1993<br /><br /></li>
+                        <li>In 1999, Nigel Slater published a recipe for avocado "bruschetta" in <em>The Guardian</em><br /><br /></li>
+                        <li>Journalist and editor Lauren Oyler credits Cafe Gitane with bringing avocado toast to Instagram<br /><br /></li>
+                        <li>A <em>New York Times</em> article showcased a "special" way to put serve avocado on toast in 1962<br /><br /></li>
                         <li>According to Lauren Oyler, avocado toast has surpassed grilled cheese as the go-to lunch in some demographics</li>
                     </ul>
                 </td>
                 <td class="wrapper">
                     <!-- M8LO9  Demonstrate the use of the iframe element
-                         YouTube video is within an iframe below -->
-                    <iframe class="iframeBlock" width="100%" height="100%" src="https://www.youtube.com/embed/xCR4iWurOQk" frameborder="0" allowfullscreen></iframe>
+                         YouTube video is within an iframe below.  Note: Several attributes, even a YouTube default, generated errors when
+                         validating.  Moved several settings to styles.css. -->
+                    <iframe class="iframeBlock" src="https://www.youtube.com/embed/xCR4iWurOQk" allowfullscreen></iframe>
                 </td>
             </tr>
             <tr>
@@ -86,10 +87,10 @@
                             <label for="emailForm">Email</label>
                             <input id="emailForm" name="Email" type="email" required />
                         
-                            <label for="howfindForm">How did you hear about this site?</label>
+                            <label for="howfindForm">How did you find this site?</label>
                             <!-- M7LO8 Demonstrate the use of a selection list in a form
                                  The field below uses the selection list type -->
-                            <select id="howfindForm" name="HowFound" required>
+                            <select id="howfindForm" name="HowFound" size="3" required>
                                 <option value="CIS 155 Class">CIS 155 Class</option>
                                 <option value="Word of Mouth">Word of Mouth</option>
                                 <option value="Internet Search">Internet Search</option>
@@ -98,7 +99,7 @@
                             <label for="questcommForm">Questions/Comments?</label>
                             <!-- M7LO9 Demonstrate the use of a text area in a form
                                  The Questions/Comments field below uses textarea -->
-                            <textarea id="quescommForm" name="Questions/Comments" required></textarea>
+                            <textarea id="questcommForm" name="Questions/Comments" required></textarea>
                       
                         <!-- M7LO10 Demonstrate the use of a submit button in a form
                              The submit button below uses the URL given in class to check the POST method used in the form -->

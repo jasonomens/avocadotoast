@@ -110,7 +110,7 @@ img.width420 {
     padding: 5px;
 }
 
-/* wrapper and block for iframe to make it resizable */
+/* wrapper and block for iframe to make it resizable and fix validation errors */
 .wrapper {
     padding-bottom: 56.25%;
     position: relative;
@@ -122,6 +122,9 @@ img.width420 {
     position: absolute;
     top: 0;
     left: 0;
+    border: none;
+    width: 100%;
+    height: 100%;
 }
 
 p#recipe {
@@ -134,7 +137,7 @@ p#recipe {
    The video takes up 75% of a cell in a table and has a margin so it's not flush with the text */
 video {
     display: block;
-    margin: 25px auto;
+    margin: 0px auto 25px 25px;
     width: 75%;
 }
 
@@ -200,7 +203,12 @@ article {
     table.recipetable thead, table.recipetable tfoot {
         display: none;
     }
-
+    
+    video {
+        margin: 0px auto 25px auto;
+        width: 100%;
+    }
+    
     /* Pics and Recipes Table */
     col#firstCol {
         background: none;
@@ -251,14 +259,23 @@ article {
         display: table;
     }
     
+    table.recipetable thead, table.recipetable tfoot {
+        background: black;
+        color: white;
+    }
+    
     /* Pics and Recipes Table */
     col#firstCol {
         background: #085005;
     }
     
-    table.recipetable thead, table.recipetable tfoot {
-        background: black;
-        color: white;
+    /* Lore Table */
+    col#loreCol1 {
+        width: 65%;
+    }
+    
+    col#loreCol2 {
+        width: 35%;
     }
 
 }
