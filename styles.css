@@ -103,7 +103,7 @@ ul#loreList li::before {
 
 /* Image, Video, and Recipe Styles */
 
-img#width420 {
+img.width420 {
     max-width: 100%;
     margin-top: 50px;
     margin-bottom: 50px;
